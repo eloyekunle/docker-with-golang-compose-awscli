@@ -2,7 +2,7 @@
 
 * [`latest` _(Dockerfile)_](https://github.com/eloyekunle/docker-with-compose-awscli/blob/master/Dockerfile)
 
-# Docker with Docker Compose image
+# Docker with Docker Compose, AWS CLI and ECS Deploy image
 
 [Docker image](https://hub.docker.com/_/docker/) with [Docker Compose](https://github.com/docker/compose) installed for CI.
 

@@ -1,6 +1,6 @@
 ## Supported tags and respective `Dockerfile` links
 
-* [`latest` _(Dockerfile)_](https://github.com/tiangolo/docker-with-compose/blob/master/Dockerfile)
+* [`latest` _(Dockerfile)_](https://github.com/eloyekunle/docker-with-compose-awscli/blob/master/Dockerfile)
 
 # Docker with Docker Compose image
 
@@ -14,14 +14,14 @@ It includes both programs and allows to run arbitrary bash scripts (contrary to 
 
 By not having to install `docker-compose` on top of a `docker:latest` image it can reduce the building time about 10 / 15 seconds in a cloud data center for each build. In environments in where the Internet connection is less good than a cloud provider, the time saved would be more.
 
-**GitHub repo**: <https://github.com/tiangolo/docker-with-compose>
+**GitHub repo**: <https://github.com/eloyekunle/docker-with-compose-awscli>
 
-**Docker Hub image**: <https://hub.docker.com/r/tiangolo/docker-with-compose/>
+**Docker Hub image**: <https://hub.docker.com/r/playmice/docker-with-compose-awscli/>
 
 ## Usage
 
 ```bash
-docker pull tiangolo/docker-with-compose
+docker pull playmice/docker-with-compose-awscli
 ```
 
 ## Problem description
@@ -76,7 +76,7 @@ This image includes Docker Compose and allows you to run any other arbitrary com
 So your GitLab CI `.gitlab-ci.yml` file could then look like:
 
 ```yml
-image: tiangolo/docker-with-compose
+image: playmice/docker-with-compose-awscli
 
 before_script:
   - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN $CI_REGISTRY

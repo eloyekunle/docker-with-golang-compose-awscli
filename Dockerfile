@@ -1,6 +1,6 @@
-FROM docker:latest
+FROM golang:alpine
 
-RUN apk add --no-cache python3 python3-dev libffi-dev bash build-base
+RUN apk add --no-cache python3 python3-dev libffi-dev build-base
 
 RUN python3 -m ensurepip && \
     rm -r /usr/lib/python*/ensurepip && \
@@ -10,3 +10,6 @@ RUN python3 -m ensurepip && \
     rm -r /root/.cache
 
 RUN pip3 install docker-compose awscli ecs-deploy
+
+# Install golangci-lint
+RUN wget -O - -q https://install.goreleaser.com/github.com/golangci/golangci-lint.sh | sh -s -- -b $(go env GOPATH)/bin v1.16.0;

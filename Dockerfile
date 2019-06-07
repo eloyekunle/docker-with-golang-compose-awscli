@@ -1,6 +1,6 @@
 FROM docker:latest
 
-RUN apk add --no-cache python3 python3-dev bash build-base
+RUN apk add --no-cache python3 python3-dev libffi-dev bash build-base
 
 RUN python3 -m ensurepip && \
     rm -r /usr/lib/python*/ensurepip && \

@@ -13,3 +13,7 @@ RUN pip3 install docker-compose awscli ecs-deploy
 
 # Install golangci-lint
 RUN wget -O - -q https://install.goreleaser.com/github.com/golangci/golangci-lint.sh | sh -s -- -b $(go env GOPATH)/bin v1.16.0;
+
+RUN export GOPATH=$(go env GOPATH)
+
+WORKDIR $GOPATH

@@ -3,6 +3,9 @@ dist: xenial
 services:
   - docker
 
+script:
+  - docker build -t playmice/docker-with-compose-awscli .
+
 deploy:
   provider: script
   script: bash scripts/build-deploy.sh

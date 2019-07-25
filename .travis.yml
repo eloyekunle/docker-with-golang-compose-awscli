@@ -1,0 +1,7 @@
+dist: xenial
+
+services:
+  - docker
+
+script:
+  - docker build .

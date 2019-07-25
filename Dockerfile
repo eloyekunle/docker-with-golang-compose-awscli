@@ -1,6 +1,6 @@
 FROM golang:alpine
 
-RUN apk add --no-cache docker py-pip python-dev libffi-dev openssl-dev git build-base bash
+RUN apk add --no-cache docker py-pip python-dev libffi-dev openssl-dev git build-base bash openrc
 
 # Start docker at boot
 RUN rc-update add docker boot

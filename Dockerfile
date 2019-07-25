@@ -1,7 +1,9 @@
 FROM docker:latest
 
+# Install Python3, build-tools, Golang and Bash
 RUN apk add --no-cache python3 python3-dev libffi-dev openssl-dev build-base git go bash
 
+# Install pip3
 RUN python3 -m ensurepip && \
     rm -r /usr/lib/python*/ensurepip && \
     pip3 install --upgrade pip setuptools && \
@@ -9,6 +11,7 @@ RUN python3 -m ensurepip && \
     if [[ ! -e /usr/bin/python ]]; then ln -sf /usr/bin/python3 /usr/bin/python; fi && \
     rm -r /root/.cache
 
+# Install deploy dependencies.
 RUN pip3 install docker-compose awscli ecs-deploy
 
 # Install golangci-lint

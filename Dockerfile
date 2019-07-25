@@ -2,8 +2,8 @@ FROM golang:alpine
 
 RUN apk add --no-cache docker py-pip python-dev libffi-dev openssl-dev git build-base bash
 
-# Start docker
-RUN service docker start
+# Start docker at boot
+RUN rc-update add docker boot
 
 # Install deploy dependencies.
 RUN pip install docker-compose awscli ecs-deploy

@@ -8,7 +8,7 @@ RUN apk add --no-cache py-pip python-dev libffi-dev openssl-dev git build-base b
 # Install golangci-lint
 RUN wget -O - -q https://install.goreleaser.com/github.com/golangci/golangci-lint.sh | sh -s -- -b $(go env GOPATH)/bin v1.17.1;
 
-ENV GOPATH $(go env GOPATH)
+ENV GOPATH /root/go
 
 # Install go-bindata
 RUN go get -u github.com/jteeuwen/go-bindata/...

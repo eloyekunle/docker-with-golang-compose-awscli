@@ -1,6 +1,6 @@
 FROM docker:latest
 
-RUN apk add --no-cache docker py-pip python-dev libffi-dev openssl-dev git build-base bash openrc go
+RUN apk add --no-cache py-pip python-dev libffi-dev openssl-dev git build-base bash go
 
 # Install deploy dependencies.
 RUN pip install docker-compose awscli ecs-deploy

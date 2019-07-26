@@ -12,6 +12,6 @@ ENV GOPATH /root/go
 ENV CGO_ENABLED 0
 
 # Install go-bindata
-RUN go get -u github.com/jteeuwen/go-bindata/...
+RUN go get github.com/jteeuwen/go-bindata/...
 
 WORKDIR $GOPATH

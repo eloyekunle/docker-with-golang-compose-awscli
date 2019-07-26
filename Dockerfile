@@ -58,6 +58,3 @@ RUN pip install docker-compose awscli ecs-deploy
 
 # Delete virtual deps
 RUN apk del .build-deps;
-
-# Install golangci-lint
-RUN wget -O - -q https://install.goreleaser.com/github.com/golangci/golangci-lint.sh | sh -s -- -b $(go env GOPATH)/bin v1.17.1;

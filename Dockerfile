@@ -1,7 +1,7 @@
 FROM docker:latest
 
 # Install Go
-RUN apk add --no-cache ca-certificates
+RUN apk add --no-cache ca-certificates bash
 
 RUN echo 'hosts: files dns' > /etc/nsswitch.conf
 
@@ -9,7 +9,6 @@ ENV GOLANG_VERSION 1.12.7
 
 RUN set -eux; \
 	apk add --no-cache --virtual .build-deps \
-		bash \
 		gcc \
 		musl-dev \
 		openssl \

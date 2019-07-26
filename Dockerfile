@@ -15,6 +15,7 @@ RUN set -eux; \
 		python-dev \
 		libffi-dev \
 		openssl-dev \
+		curl \
 	; \
 	export \
 		GOROOT_BOOTSTRAP="$(go env GOROOT)" \

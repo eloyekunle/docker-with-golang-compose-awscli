@@ -29,7 +29,7 @@ RUN set -eux; \
 		x86) export GO386='387' ;; \
 	esac; \
 	\
-	export LATEST_GOLANG_VERSION=$(curl -s https://golang.org/dl/ | grep -m 1 -o 'go1\(\.[0-9]\+\)\+')
+	export LATEST_GOLANG_VERSION=$(curl -s https://golang.org/dl/ | grep -m 1 -o 'go1\(\.[0-9]\+\)\+'); \
 	wget -O go.tgz "https://golang.org/dl/$LATEST_GOLANG_VERSION.src.tar.gz"; \
 	echo '95e8447d6f04b8d6a62de1726defbb20ab203208ee167ed15f83d7978ce43b13 *go.tgz' | sha256sum -c -; \
 	tar -C /usr/local -xzf go.tgz; \

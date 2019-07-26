@@ -3,8 +3,6 @@ FROM docker:latest
 # Install Go
 RUN apk add --no-cache ca-certificates
 
-RUN [ ! -e /etc/nsswitch.conf ] && echo 'hosts: files dns' > /etc/nsswitch.conf
-
 ENV GOLANG_VERSION 1.12.7
 
 RUN set -eux; \

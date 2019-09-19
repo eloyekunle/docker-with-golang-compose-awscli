@@ -1,7 +1,7 @@
 FROM docker:latest
 
 # Install Go
-RUN apk add --no-cache ca-certificates bash git build-base python2 py-pip
+RUN apk add --no-cache ca-certificates bash git build-base python2 py-pip openssh-client
 
 RUN echo 'hosts: files dns' > /etc/nsswitch.conf
 

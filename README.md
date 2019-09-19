@@ -1,5 +1,7 @@
 # Docker with Docker Compose, AWS CLI and ECS Deploy image
 
+[![Build Status](https://travis-ci.com/eloyekunle/docker-with-golang-compose-awscli.svg?branch=master)](https://travis-ci.com/eloyekunle/docker-with-golang-compose-awscli)
+
 [Docker image](https://hub.docker.com/_/docker/) with [Docker Compose](https://github.com/docker/compose) installed for CI.
 
 ## Supported tags and respective `Dockerfile` links

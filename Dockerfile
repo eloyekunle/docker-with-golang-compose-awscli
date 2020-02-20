@@ -7,14 +7,11 @@ RUN echo 'hosts: files dns' > /etc/nsswitch.conf
 
 RUN set -eux; \
 	apk add --no-cache --virtual .build-deps \
-		gcc \
 		musl-dev \
-		openssl \
 		go \
 		python-dev \
 		libffi-dev \
 		openssl-dev \
-		curl \
 	; \
 	export \
 		GOROOT_BOOTSTRAP="$(go env GOROOT)" \

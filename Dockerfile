@@ -54,4 +54,4 @@ RUN pip install docker-compose awscli ecs-deploy
 # Delete virtual deps
 RUN apk del .build-deps;
 
-RUN GO111MODULE=off go get github.com/t-yuki/gocover-cobertura && GO111MODULE=off go get -u github.com/ory/go-acc
+RUN GO111MODULE=off go get -u github.com/ory/go-acc

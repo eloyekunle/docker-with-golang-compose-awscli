@@ -9,7 +9,7 @@ RUN set -eux; \
 	apk add --no-cache --virtual .build-deps \
 		musl-dev \
 		go \
-		python-dev \
+		python3-dev \
 		libffi-dev \
 		openssl-dev \
 	; \

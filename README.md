@@ -15,9 +15,6 @@ For faster CI builds.
 Contains:
 
 - Go - Latest version
-- [golangci-lint](https://github.com/golangci/golangci-lint)
-- AWS CLI
-- [ECS Deploy](https://github.com/fabfuel/ecs-deploy)
 - Build Tools (`make` etc)
 
 **GitHub repo**: <https://github.com/eloyekunle/docker-with-compose-awscli>

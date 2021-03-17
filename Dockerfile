@@ -51,4 +51,4 @@ WORKDIR $GOPATH
 # Delete virtual deps
 RUN apk del .build-deps;
 
-RUN GO111MODULE=off go get -u github.com/ory/go-acc
+RUN go get -u github.com/ory/go-acc
